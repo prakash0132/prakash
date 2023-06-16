@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer Example</title>
+  <script>
+    function startTimer() {
+      var seconds = 10;
+      var countdown = setInterval(function() {
+        document.getElementById("timer").innerHTML = seconds + " seconds remaining";
+        seconds--;
+        if (seconds < 0) {
+          clearInterval(countdown);
+          document.getElementById("timer").innerHTML = "Timer has ended!";
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <h1>Timer Example</h1>
+  <button onclick="startTimer()">Start Timer</button>
+  <p id="timer"></p>
+</body>
+</html>
